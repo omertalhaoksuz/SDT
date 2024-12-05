@@ -1,10 +1,8 @@
-import random
+def bubble_sort(array):
+    n = len(array)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if array[j] > array[j + 1]:
+                array[j], array[j + 1] = array[j + 1], array[j]
+    return array
 
-def create_table():
-    table = [random.randint(1, 100) for _ in range(5)]
-    print("Unsorted table:", table)
-    table.sort()
-    print("Sorted table:", table)
-
-if __name__ == "__main__":
-    create_table()
